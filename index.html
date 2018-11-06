@@ -152,6 +152,93 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Github配置SSH-Key" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/06/Github配置SSH-Key/">Github配置SSH Key</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/06/Github配置SSH-Key/" class="archive-article-date">
+  	<time datetime="2018-11-06T06:25:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一、作用</p>
+<p>配置SSH Key之后，每次pull、push不用都输入用户名和密码，提高效率。</p>
+<p>二、步骤</p>
+<p>(1) 检查本机上是否已经存在SSH Key<br>打开终端，输入如下命令：<br>cd .ssh<br>Ls -la</p>
+<p>检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：<br>cat id_rsa.pub</p>
+<p>检查本地密钥文件（最后的账号名）是否对应github注册账号，如果是，则说明已经配置。</p>
+<p>(2) 创建一个SSH Key<br>在终端输入如下命令：<br>ssh-keygen -t rsa -C”new email”</p>
+<p>生成一组新的id_rsa_new和id_rsa_new.pub。注意：出现提示输入文件名的时候要输入与默认配置不一样的文件名，比如： id_rsa_new。然后会提示你输入两次密码，可以为空。</p>
+<p>(3) 添加SSH Key到Github<br>你的.ssh文件夹下，应该有一个id_rsa_new.pub文件了，打开该文件，复制里面的文本。然后登录Github，点击右上角头像右边的三角图标，点击Settings，然后在左边菜单栏点击SSH and GPG keys，点击New SSH key，Title 随便填一个，在Key栏填入你复制的内容，点击Add SSH key，就添加成功了。</p>
+<p>(4) 执行ssh-agent让ssh识别新的私钥<br>默认SSH只会读取id_rsa，所以为了让SSH识别新的私钥，需要将其添加到SSH agent。在终端输入如下命令：<br>ssh-add ~/.ssh/id_rsa_new</p>
+<p>注意：如果报错：Could not open a connection to your authentication agent.无法连接到ssh agent。可执行ssh-agent bash命令后再执行ssh-add命令。</p>
+<p>(5) 检验SSH Key是否配置成功<br>在终端输入如下命令：<br>ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a></p>
+<p>如果最后出现<br>Hi username! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+<p>就说明你的SSH Key配置成功了。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SSH</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/06/Github配置SSH-Key/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -314,6 +401,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
