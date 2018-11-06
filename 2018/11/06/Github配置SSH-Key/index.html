@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Github配置SSH Key | Liangyun Liu&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、作用 配置SSH Key之后，每次pull、push不用都输入用户名和密码，提高效率。 二、步骤 (1) 检查本机上是否已经存在SSH Key打开终端，输入如下命令：cd .sshLs -la 检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：cat id_rsa.pub 检查本地密钥文件（最后的账号名）是否对应githu">
+  <meta name="description" content="一、作用 配置SSH Key之后，每次pull、push不用都输入用户名和密码，提高效率。 二、步骤 (1) 检查本机上是否已经存在SSH Key打开终端，输入如下命令：12cd .sshls -la 检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：1cat id_rsa.pub 检查本地密钥文件（最后的账号名）是否对应gi">
 <meta name="keywords" content="SSH">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Github配置SSH Key">
 <meta property="og:url" content="http://yoursite.com/2018/11/06/Github配置SSH-Key/index.html">
 <meta property="og:site_name" content="Liangyun Liu&#39;s Blog">
-<meta property="og:description" content="一、作用 配置SSH Key之后，每次pull、push不用都输入用户名和密码，提高效率。 二、步骤 (1) 检查本机上是否已经存在SSH Key打开终端，输入如下命令：cd .sshLs -la 检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：cat id_rsa.pub 检查本地密钥文件（最后的账号名）是否对应githu">
+<meta property="og:description" content="一、作用 配置SSH Key之后，每次pull、push不用都输入用户名和密码，提高效率。 二、步骤 (1) 检查本机上是否已经存在SSH Key打开终端，输入如下命令：12cd .sshls -la 检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：1cat id_rsa.pub 检查本地密钥文件（最后的账号名）是否对应gi">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-06T06:28:00.539Z">
+<meta property="og:updated_time" content="2018-11-06T16:36:07.115Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github配置SSH Key">
-<meta name="twitter:description" content="一、作用 配置SSH Key之后，每次pull、push不用都输入用户名和密码，提高效率。 二、步骤 (1) 检查本机上是否已经存在SSH Key打开终端，输入如下命令：cd .sshLs -la 检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：cat id_rsa.pub 检查本地密钥文件（最后的账号名）是否对应githu">
+<meta name="twitter:description" content="一、作用 配置SSH Key之后，每次pull、push不用都输入用户名和密码，提高效率。 二、步骤 (1) 检查本机上是否已经存在SSH Key打开终端，输入如下命令：12cd .sshls -la 检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：1cat id_rsa.pub 检查本地密钥文件（最后的账号名）是否对应gi">
   
     <link rel="alternative" href="/atom.xml" title="Liangyun Liu&#39;s Blog" type="application/atom+xml">
   
@@ -174,16 +174,19 @@
         <p>一、作用</p>
 <p>配置SSH Key之后，每次pull、push不用都输入用户名和密码，提高效率。</p>
 <p>二、步骤</p>
-<p>(1) 检查本机上是否已经存在SSH Key<br>打开终端，输入如下命令：<br>cd .ssh<br>Ls -la</p>
-<p>检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：<br>cat id_rsa.pub</p>
+<p>(1) 检查本机上是否已经存在SSH Key<br>打开终端，输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd .ssh</span><br><span class="line">ls -la</span><br></pre></td></tr></table></figure></p>
+<p>检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure></p>
 <p>检查本地密钥文件（最后的账号名）是否对应github注册账号，如果是，则说明已经配置。</p>
-<p>(2) 创建一个SSH Key<br>在终端输入如下命令：<br>ssh-keygen -t rsa -C”new email”</p>
-<p>生成一组新的id_rsa_new和id_rsa_new.pub。注意：出现提示输入文件名的时候要输入与默认配置不一样的文件名，比如： id_rsa_new。然后会提示你输入两次密码，可以为空。</p>
+<p>(2) 创建一个SSH Key<br>在终端输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C&quot;new email&quot;</span><br></pre></td></tr></table></figure></p>
+<p>生成一组新的id_rsa_new和id_rsa_new.pub。</p>
+<font color="red">注意：出现提示输入文件名的时候要输入与默认配置不一样的文件名，比如： id_rsa_new。然后会提示你输入两次密码，可以为空。</font>
+
 <p>(3) 添加SSH Key到Github<br>你的.ssh文件夹下，应该有一个id_rsa_new.pub文件了，打开该文件，复制里面的文本。然后登录Github，点击右上角头像右边的三角图标，点击Settings，然后在左边菜单栏点击SSH and GPG keys，点击New SSH key，Title 随便填一个，在Key栏填入你复制的内容，点击Add SSH key，就添加成功了。</p>
-<p>(4) 执行ssh-agent让ssh识别新的私钥<br>默认SSH只会读取id_rsa，所以为了让SSH识别新的私钥，需要将其添加到SSH agent。在终端输入如下命令：<br>ssh-add ~/.ssh/id_rsa_new</p>
-<p>注意：如果报错：Could not open a connection to your authentication agent.无法连接到ssh agent。可执行ssh-agent bash命令后再执行ssh-add命令。</p>
-<p>(5) 检验SSH Key是否配置成功<br>在终端输入如下命令：<br>ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a></p>
-<p>如果最后出现<br>Hi username! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+<p>(4) 执行ssh-agent让ssh识别新的私钥<br>默认SSH只会读取id_rsa，所以为了让SSH识别新的私钥，需要将其添加到SSH agent。在终端输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~/.ssh/id_rsa_new</span><br></pre></td></tr></table></figure></p>
+<font color="red">注意：如果报错：Could not open a connection to your authentication agent.无法连接到ssh agent。可执行ssh-agent bash命令后再执行ssh-add命令。</font>
+
+<p>(5) 检验SSH Key是否配置成功<br>在终端输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
+<p>如果最后出现<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi username! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure></p>
 <p>就说明你的SSH Key配置成功了。</p>
 
       
