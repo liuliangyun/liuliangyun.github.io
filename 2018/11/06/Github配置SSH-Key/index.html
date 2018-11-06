@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Liangyun Liu&#39;s Blog">
 <meta property="og:description" content="一、作用 配置SSH Key之后，每次pull、push不用都输入用户名和密码，提高效率。 二、步骤 (1) 检查本机上是否已经存在SSH Key打开终端，输入如下命令：12cd .sshls -la 检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：1cat id_rsa.pub 检查本地密钥文件（最后的账号名）是否对应gi">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-06T16:36:07.115Z">
+<meta property="og:updated_time" content="2018-11-06T16:41:22.528Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github配置SSH Key">
 <meta name="twitter:description" content="一、作用 配置SSH Key之后，每次pull、push不用都输入用户名和密码，提高效率。 二、步骤 (1) 检查本机上是否已经存在SSH Key打开终端，输入如下命令：12cd .sshls -la 检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：1cat id_rsa.pub 检查本地密钥文件（最后的账号名）是否对应gi">
@@ -177,7 +177,7 @@
 <p>(1) 检查本机上是否已经存在SSH Key<br>打开终端，输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd .ssh</span><br><span class="line">ls -la</span><br></pre></td></tr></table></figure></p>
 <p>检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure></p>
 <p>检查本地密钥文件（最后的账号名）是否对应github注册账号，如果是，则说明已经配置。</p>
-<p>(2) 创建一个SSH Key<br>在终端输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C&quot;new email&quot;</span><br></pre></td></tr></table></figure></p>
+<p>(2) 创建一个SSH Key<br>在终端输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;new email&quot;</span><br></pre></td></tr></table></figure></p>
 <p>生成一组新的id_rsa_new和id_rsa_new.pub。</p>
 <font color="red">注意：出现提示输入文件名的时候要输入与默认配置不一样的文件名，比如： id_rsa_new。然后会提示你输入两次密码，可以为空。</font>
 
