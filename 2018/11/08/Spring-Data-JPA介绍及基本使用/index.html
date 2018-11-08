@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Liangyun Liu&#39;s Blog</title>
+  <title>Spring Data JPA介绍及基本使用 | Liangyun Liu&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Liangyun Liu&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="一、什么是JPA &amp;nbsp;&amp;nbsp;JPA (Java Persistence API) 是Sun官方提出的Java持久化规范。它为Java开发人员提供了一种对象/关联映射工具来管理Java应用中的关系数据。&amp;nbsp;&amp;nbsp;JPA的总体思想和现有的Hibernate，TopLink，JDO等ORM框架大体一致。总的来说，JPA包括以下3方面的技术：  ORM映射元数据&amp;nbsp;&amp;n">
+<meta name="keywords" content="jpa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring Data JPA介绍及基本使用">
+<meta property="og:url" content="http://yoursite.com/2018/11/08/Spring-Data-JPA介绍及基本使用/index.html">
 <meta property="og:site_name" content="Liangyun Liu&#39;s Blog">
+<meta property="og:description" content="一、什么是JPA &amp;nbsp;&amp;nbsp;JPA (Java Persistence API) 是Sun官方提出的Java持久化规范。它为Java开发人员提供了一种对象/关联映射工具来管理Java应用中的关系数据。&amp;nbsp;&amp;nbsp;JPA的总体思想和现有的Hibernate，TopLink，JDO等ORM框架大体一致。总的来说，JPA包括以下3方面的技术：  ORM映射元数据&amp;nbsp;&amp;n">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-08T03:33:33.016Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Liangyun Liu&#39;s Blog">
+<meta name="twitter:title" content="Spring Data JPA介绍及基本使用">
+<meta name="twitter:description" content="一、什么是JPA &amp;nbsp;&amp;nbsp;JPA (Java Persistence API) 是Sun官方提出的Java持久化规范。它为Java开发人员提供了一种对象/关联映射工具来管理Java应用中的关系数据。&amp;nbsp;&amp;nbsp;JPA的总体思想和现有的Hibernate，TopLink，JDO等ORM框架大体一致。总的来说，JPA包括以下3方面的技术：  ORM映射元数据&amp;nbsp;&amp;n">
   
     <link rel="alternative" href="/atom.xml" title="Liangyun Liu&#39;s Blog" type="application/atom+xml">
   
@@ -146,78 +151,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Spring-Data-JPA支持的两种复杂动态查询方法" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+            <article id="post-Spring-Data-JPA介绍及基本使用" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/08/Spring-Data-JPA支持的两种复杂动态查询方法/">Spring Data JPA支持的两种复杂动态查询方法</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/08/Spring-Data-JPA支持的两种复杂动态查询方法/" class="archive-article-date">
-  	<time datetime="2018-11-08T02:20:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/08/Spring-Data-JPA支持的两种复杂动态查询方法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spring-Data-JPA介绍及基本使用" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/08/Spring-Data-JPA介绍及基本使用/">Spring Data JPA介绍及基本使用</a>
+    <h1 class="article-title" itemprop="name">
+      Spring Data JPA介绍及基本使用
     </h1>
   
 
@@ -408,6 +349,37 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/AliPay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/WECHAT.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -426,16 +398,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/08/Spring-Data-JPA介绍及基本使用/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/08/Spring-Data-JPA介绍及基本使用/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/11/08/Spring-Data-JPA支持的两种复杂动态查询方法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Spring Data JPA支持的两种复杂动态查询方法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/11/07/三阶魔方还原攻略/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">三阶魔方还原攻略</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -455,249 +495,14 @@
 
 
 
-
   
-    <article id="post-三阶魔方还原攻略" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/07/三阶魔方还原攻略/">三阶魔方还原攻略</a>
-    </h1>
   
 
-        
-        <a href="/2018/11/07/三阶魔方还原攻略/" class="archive-article-date">
-  	<time datetime="2018-11-07T13:20:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>一、还原底层十字</p>
-<p>当颜色面在底层且与中心块颜色​不相邻时，使用：<strong>DF’RF</strong> （保持匹配面是右手面转动）</p>
-<p>二、还原底层角块</p>
-<p>(1) 若白色面在右面，使用：<strong>R’DR</strong><br>(2) 若白色面在前面，使用：<strong>DR’D’R</strong><br>(3) ​若白色面在底面，使用：<strong>R’D2RD’</strong> 变成上述两种情况之一<br>(4) 若角块的位置已经对好，但颜色没对好，白色面在右面，使用：<strong>R’DRD’</strong> 变成第一种情况<br>​(5) ​​若角块的位置已经对好，但颜色没对好，白色面在前面，使用：<strong>R’D’R</strong> 变成第二种情况<br>​​​<br>​​​三、还原第二层角块<br>​​​<br>​​​(1) 当颜色匹配的长T字面在前面，使用：<strong>URU’R’U’F’UF</strong><br>(2) 当颜色匹配的长T字面在右面，使用：<strong>U’F’UFURU’R’</strong><br>(3) ​当位置正确但颜色没对好，或者已经在第二层但位置不对，使用上述公式（1）或（2）先从顶层 随便 找个块“还原”到其位置（不论是不是含有黄色的棱块，都可以！），那这个块自然会移到顶层（被替换出来了），接着适当转顶层就会出现上述两种情况之一</p>
-<p>四、还原顶层十字<br>​​​<br>​​​顶面有三种情况，点，拐角和一字，均使用：<strong>R’U’F’UFR</strong> 还原成十字<br>​​​<br>五、顶层十字变小鱼<br>​​​<br>​​​十字有七种情况，重复运用：<strong>R’U’RU’R’U’2R</strong> 最终得到两种小鱼形态<br>​​​<br>六、还原顶层基本颜色<br>​​​<br>​​​(1) 小鱼形态1，前左有顶层色块，运用：<strong>R’U’RU’R’U2R</strong><br>(2) 小鱼形态2，前右有顶层色块，运用：<strong>FUF’UFU’2F’</strong></p>
-<p>七、还原顶层角块<br>​​​<br>​​​(1) 若有两个角块已复位的情况，则将此面面向自己，运用：<strong>RB’RF2R’BRF2R2</strong><br>(2) 若无两个角块已复位的情况，随便用一次上述情况（1）公式，就一定会出现有两个角块已复位的情况</p>
-<p>八、还原顶层边块<br>​​​<br>​​​(1) 当顶层边块一面固定，其余三面呈三角逆时针互换时，使用一次：<strong>RU’RURURU’R’U’R2</strong> 即可还原<br>(2) 当顶层边块一面固定，其余三面呈三角顺时针互换时，使用两次：<strong>RU’RURURU’R’U’R2</strong> 即可还原<br>​​​(3) 当顶层相邻边块需要互换时，使用一次：<strong>RU’RURURU’R’U’R2</strong> ，再使用U’，然后重复使用一遍公式，即可还原<br>​​​(4) 当顶层相对边块需要互换时，使用一次：<strong>RU’RURURU’R’U’R2</strong> ，再使用U，然后重复使用一遍公式，即可还原</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">rubik's cube</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/07/三阶魔方还原攻略/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Github配置SSH-Key" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/06/Github配置SSH-Key/">Github配置SSH Key</a>
-    </h1>
   
 
-        
-        <a href="/2018/11/06/Github配置SSH-Key/" class="archive-article-date">
-  	<time datetime="2018-11-06T06:25:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>一、作用</p>
-<p>配置SSH Key之后，每次pull、push不用都输入用户名和密码，提高效率。</p>
-<p>二、步骤</p>
-<p>(1) 检查本机上是否已经存在SSH Key<br>打开终端，输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd .ssh</span><br><span class="line">ls -la</span><br></pre></td></tr></table></figure></p>
-<p>检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure></p>
-<p>检查本地密钥文件（最后的账号名）是否对应github注册账号，如果是，则说明已经配置。</p>
-<p>(2) 创建一个SSH Key<br>在终端输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;new email&quot;</span><br></pre></td></tr></table></figure></p>
-<p>生成一组新的id_rsa_new和id_rsa_new.pub。</p>
-<font color="red">注意：出现提示输入文件名的时候要输入与默认配置不一样的文件名，比如： id_rsa_new。然后会提示你输入两次密码，可以为空。</font>
-
-<p>(3) 添加SSH Key到Github<br>你的.ssh文件夹下，应该有一个id_rsa_new.pub文件了，打开该文件，复制里面的文本。然后登录Github，点击右上角头像右边的三角图标，点击Settings，然后在左边菜单栏点击SSH and GPG keys，点击New SSH key，Title 随便填一个，在Key栏填入你复制的内容，点击Add SSH key，就添加成功了。</p>
-<p>(4) 执行ssh-agent让ssh识别新的私钥<br>默认SSH只会读取id_rsa，所以为了让SSH识别新的私钥，需要将其添加到SSH agent。在终端输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~/.ssh/id_rsa_new</span><br></pre></td></tr></table></figure></p>
-<font color="red">注意：如果报错：Could not open a connection to your authentication agent.无法连接到ssh agent。可执行ssh-agent bash命令后再执行ssh-add命令。</font>
-
-<p>(5) 检验SSH Key是否配置成功<br>在终端输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
-<p>如果最后出现<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi username! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure></p>
-<p>就说明你的SSH Key配置成功了。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SSH</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/06/Github配置SSH-Key/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/06/hello-world/">Hello World</a>
-    </h1>
   
 
-        
-        <a href="/2018/11/06/hello-world/" class="archive-article-date">
-  	<time datetime="2018-11-06T05:37:22.964Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/06/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -720,8 +525,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
