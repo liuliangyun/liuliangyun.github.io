@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: rubik&#39;s cube | Liangyun Liu&#39;s Blog</title>
+  <title>JPA中常用的注解标签 | Liangyun Liu&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Liangyun Liu&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/tags/rubik-s-cube/index.html">
+  <meta name="description" content="1、@Entity@Entity标记在类名上面，作为实体类的标识。 2、@Table当实体类与其映射的数据库表名不同名时需要使用 @Table 标注说明，该标注与 @Entity 标注并列使用，置于实体类声明语句之前，可写于单独语句行，也可与声明语句同行。@Table 标注的常用选项是 name，用于指明数据库的表名。@Table标注还有一个两个选项 catalog 和 schema 用于设置表所">
+<meta name="keywords" content="jpa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JPA中常用的注解标签">
+<meta property="og:url" content="http://yoursite.com/2018/11/13/JPA中常用的注解标签/index.html">
 <meta property="og:site_name" content="Liangyun Liu&#39;s Blog">
+<meta property="og:description" content="1、@Entity@Entity标记在类名上面，作为实体类的标识。 2、@Table当实体类与其映射的数据库表名不同名时需要使用 @Table 标注说明，该标注与 @Entity 标注并列使用，置于实体类声明语句之前，可写于单独语句行，也可与声明语句同行。@Table 标注的常用选项是 name，用于指明数据库的表名。@Table标注还有一个两个选项 catalog 和 schema 用于设置表所">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-13T15:41:29.031Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Liangyun Liu&#39;s Blog">
+<meta name="twitter:title" content="JPA中常用的注解标签">
+<meta name="twitter:description" content="1、@Entity@Entity标记在类名上面，作为实体类的标识。 2、@Table当实体类与其映射的数据库表名不同名时需要使用 @Table 标注说明，该标注与 @Entity 标注并列使用，置于实体类声明语句之前，可写于单独语句行，也可与声明语句同行。@Table 标注的常用选项是 name，用于指明数据库的表名。@Table标注还有一个两个选项 catalog 和 schema 用于设置表所">
   
     <link rel="alternative" href="/atom.xml" title="Liangyun Liu&#39;s Blog" type="application/atom+xml">
   
@@ -146,60 +151,228 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JPA中常用的注解标签" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/07/三阶魔方还原攻略/" class="archive-article-date">
-  	<time datetime="2018-11-07T13:20:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/07/三阶魔方还原攻略/">三阶魔方还原攻略</a>
+    <h1 class="article-title" itemprop="name">
+      JPA中常用的注解标签
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/11/13/JPA中常用的注解标签/" class="archive-article-date">
+  	<time datetime="2018-11-13T15:34:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、@Entity<br>@Entity标记在类名上面，作为实体类的标识。</p>
+<p>2、@Table<br>当实体类与其映射的数据库表名不同名时需要使用 @Table 标注说明，该标注与 @Entity 标注并列使用，置于实体类声明语句之前，可写于单独语句行，也可与声明语句同行。<br>@Table 标注的常用选项是 name，用于指明数据库的表名。<br>@Table标注还有一个两个选项 catalog 和 schema 用于设置表所属的数据库目录或模式，通常为数据库名。uniqueConstraints选项用于设置约束条件，通常不须设置。</p>
+<p>3、@Id<br>@Id设置对象表示符，标识的实体类的属性映射对应表中的主键。</p>
+<p>4、@GeneratedValue<br>设置标识符的生成策略，常与@Id一起使用。<br>参数：strategy指定具体的生成策略，有以下几种：</p>
+<ul>
+<li>方式一：@GeneratedValue(strategy=GenerationType.AUTO) 也是默认策略， 即写成@GeneratedValue也可；类似于hibernate的native策略，生成方式取决于底层的数据库；</li>
+<li>方式二：@GeneratedValue(strategy = GenerationType.IDENTITY)指定“自动增长”策略，适用于MySQL； </li>
+<li>方式三：@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = “seq_tbl_person”)指定“序列”策略，常用于Oracle，其中generator表示生成器的名字。而且还要指定@SequenceGenerator(name = “seq_tbl_person”, sequenceName = “seq_tbl_person”, allocationSize = 1)注解配合使用。其中name指定生成器的名字（与generator的值一样），sequenceName指定数据库中定义序列的名字，allocationSize指定序列每次增长1。</li>
+</ul>
+<p>5、@Column<br>描述数据库表中该字段的定义，具有以下属性：</p>
+<ul>
+<li>name：表示数据库表中该字段的名称，默认情形属性名称一致；</li>
+<li>nullable：表示该字段是否允许为null，默认为true；</li>
+<li>unique：表示该字段是否是唯一标识，默认为false；</li>
+<li>length：表示该字段的大小，仅对String类型的字段有效；</li>
+<li>insertable：表示在ORM框架执行插入操作时，该字段是否应出现INSETRT语句中，默认为true；</li>
+<li>updateable：表示在ORM框架执行更新操作时，该字段是否应该出现在UPDATE语句中，默认为true。对于一经创建就不可以更改的字段，该属性非常有用，如对于birthday字段；</li>
+<li>columnDefinition：表示该字段在数据库中的实际类型。通常ORM框架可以根据属性类型自动判断数据库中字段的类型，但是对于Date类型仍无法确定数据库中字段类型究竟是DATE，TIME还是TIMESTAMP。此外，String的默认映射类型为VARCHAR，如果要将String类型映射到特定数据库的BLOB或TEXT字段类型，该属性非常有用。</li>
+</ul>
+<p>6、@OrderBy<br>在加载数据的时候可以为其指定顺序。</p>
+<p>7、@Transient<br>表示该属性并非一个到数据库表的字段的映射，ORM框架将忽略该属性。 </p>
+<p>8、@OneToOne<br>描述一个一对一的关联，具有以下属性：</p>
+<ul>
+<li>fetch：表示抓取策略，默认为FetchType.LAZY，即延迟加载；</li>
+<li>cascade：表示级联操作策略。</li>
+</ul>
+<p>9、@ManyToOne<br>表示一个多对一的映射，该注解标注的属性通常是数据库表的外键，具有以下属性：</p>
+<ul>
+<li>optional：是否允许该字段为null，该属性应该根据数据库表的外键约束来确定，默认为true；</li>
+<li>fetch：表示抓取策略，默认为FetchType.EAGER；</li>
+<li>cascade：表示默认的级联操作策略，可以为ALL，PERSIST，MERGE，REFRESH和REMOVE中的若干组合，默认为无级联操作；</li>
+<li>targetEntity：表示该属性关联的实体类型。该属性通常不必指定，ORM框架根据属性类型自动判断targetEntity。</li>
+</ul>
+<p>10、@OneToMany<br>描述一个一对多的映射，该属性应该为集体类型,在数据库中并没有实际字段，具有以下属性：</p>
+<ul>
+<li>fetch：表示抓取策略，默认为FetchType.LAZY，因为关联的多个对象通常不必从数据库预先读取到内存；</li>
+<li>cascade：表示级联操作策略，对于OneToMany类型的关联非常重要，通常该实体更新或删除时，其关联的实体也应当被更新或删除。例如：实体User和Order是OneToMany的关系，则实体User被删除时，其关联的实体Order也应该被全部删除。</li>
+</ul>
+<p>11、@ManyToMany<br>描述一个多对多的关联。多对多关联实际上是两个一对多关联，但是在ManyToMany描述中，中间表是由ORM框架自动处理，具体属性有：</p>
+<ul>
+<li>targetEntity：表示多对多关联的另一个实体类的全名，例如：package.Book.class；</li>
+<li>mappedBy：表示多对多关联的另一个实体类的对应集合属性名称。<font color="red">注意：有且只有一个实体的@ManyToMany注解需要指定mappedBy属性，指向targetEntity的集合属性名称。</font></li>
+</ul>
+<p>12、@JoinColumn(name=“”)<br>@JoinColumn和@Column类似，只不过@JoinColumn描述的不是一个简单字段，而是一个关联字段。name默认的名称由其关联的实体名决定。例如，实体Order有一个user属性来关联实体User，则Order的user属性为一个外键，其默认的名称为实体User的名称+下划线+实体User的主键名称。</p>
+<p>13、@JoinTable(name = “student_teacher”, inverseJoinColumns = @JoinColumn(name = “tid”), joinColumns = @JoinColumn(name = “sid”))<br>@JoinTable表示由第三张表来维护两张表的关系，具有以下属性：</p>
+<ul>
+<li>name：是关系表的名字 </li>
+<li>joinColumns：自己这一端的主键 </li>
+<li>inverseJoinColumns：对方的主键</li>
+</ul>
+<p>14、@MappedSuperclass<br>@MappedSuperclass可以将超类的JPA注解传递给子类，使子类能够继承超类的JPA注解。</p>
+<p>15、@Embedded<br>@Embedded将几个字段组合成一个类，并作为整个Entity的一个属性。<br>例如User包括id，name，city，street，zip等属性。我们希望city，street，zip属性映射为Address对象。这样，User对象将具有id，name和address这三个属性。此时，Address对象必须定义为@Embededable。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/AliPay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/WECHAT.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">rubik's cube</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">jpa</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/13/JPA中常用的注解标签/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/11/13/Mac下使用Hexo和Github搭建个人博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mac下使用Hexo和Github搭建个人博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -222,9 +395,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
