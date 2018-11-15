@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Github配置SSH Key | Liangyun Liu&#39;s Blog</title>
+  <title>（一）React项目初始化及工作方式 | Liangyun Liu&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、作用 配置SSH Key之后，每次pull、push不用都输入用户名和密码，提高效率。 二、步骤 (1) 检查本机上是否已经存在SSH Key打开终端，输入如下命令：12cd .sshls -la 检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：1cat id_rsa.pub 检查本地密钥文件（最后的账号名）是否对应gi">
-<meta name="keywords" content="SSH">
+  <meta name="description" content="##（一）React项目初始化及工作方式1、安装Node.js和npm，以支持开发工具的使用；2、通过命令行安装create-react-app：1npm install —global create-react-app  //简写：npm install —g create-react-app 3、执行以下命令，在当前目录下创建一个名为first-react-app的目录，并自动添加一个reac">
+<meta name="keywords" content="react">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Github配置SSH Key">
-<meta property="og:url" content="http://yoursite.com/2018/11/06/Github配置SSH-Key/index.html">
+<meta property="og:title" content="（一）React项目初始化及工作方式">
+<meta property="og:url" content="http://yoursite.com/2018/11/15/（一）React项目初始化及工作方式/index.html">
 <meta property="og:site_name" content="Liangyun Liu&#39;s Blog">
-<meta property="og:description" content="一、作用 配置SSH Key之后，每次pull、push不用都输入用户名和密码，提高效率。 二、步骤 (1) 检查本机上是否已经存在SSH Key打开终端，输入如下命令：12cd .sshls -la 检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：1cat id_rsa.pub 检查本地密钥文件（最后的账号名）是否对应gi">
+<meta property="og:description" content="##（一）React项目初始化及工作方式1、安装Node.js和npm，以支持开发工具的使用；2、通过命令行安装create-react-app：1npm install —global create-react-app  //简写：npm install —g create-react-app 3、执行以下命令，在当前目录下创建一个名为first-react-app的目录，并自动添加一个reac">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-06T16:41:22.528Z">
+<meta property="og:image" content="http://yoursite.com/2018/11/15/img/React项目初始化及工作方式_图1.png">
+<meta property="og:updated_time" content="2018-11-15T06:02:58.156Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Github配置SSH Key">
-<meta name="twitter:description" content="一、作用 配置SSH Key之后，每次pull、push不用都输入用户名和密码，提高效率。 二、步骤 (1) 检查本机上是否已经存在SSH Key打开终端，输入如下命令：12cd .sshls -la 检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：1cat id_rsa.pub 检查本地密钥文件（最后的账号名）是否对应gi">
+<meta name="twitter:title" content="（一）React项目初始化及工作方式">
+<meta name="twitter:description" content="##（一）React项目初始化及工作方式1、安装Node.js和npm，以支持开发工具的使用；2、通过命令行安装create-react-app：1npm install —global create-react-app  //简写：npm install —g create-react-app 3、执行以下命令，在当前目录下创建一个名为first-react-app的目录，并自动添加一个reac">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/15/img/React项目初始化及工作方式_图1.png">
   
     <link rel="alternative" href="/atom.xml" title="Liangyun Liu&#39;s Blog" type="application/atom+xml">
   
@@ -151,43 +153,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Github配置SSH-Key" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-（一）React项目初始化及工作方式" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Github配置SSH Key
+      （一）React项目初始化及工作方式
     </h1>
   
 
         
-        <a href="/2018/11/06/Github配置SSH-Key/" class="archive-article-date">
-  	<time datetime="2018-11-06T06:25:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-06</time>
+        <a href="/2018/11/15/（一）React项目初始化及工作方式/" class="archive-article-date">
+  	<time datetime="2018-11-15T05:42:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一、作用</p>
-<p>配置SSH Key之后，每次pull、push不用都输入用户名和密码，提高效率。</p>
-<p>二、步骤</p>
-<p>(1) 检查本机上是否已经存在SSH Key<br>打开终端，输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd .ssh</span><br><span class="line">ls -la</span><br></pre></td></tr></table></figure></p>
-<p>检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure></p>
-<p>检查本地密钥文件（最后的账号名）是否对应github注册账号，如果是，则说明已经配置。</p>
-<p>(2) 创建一个SSH Key<br>在终端输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;new email&quot;</span><br></pre></td></tr></table></figure></p>
-<p>生成一组新的id_rsa_new和id_rsa_new.pub。</p>
-<font color="red">注意：出现提示输入文件名的时候要输入与默认配置不一样的文件名，比如： id_rsa_new。然后会提示你输入两次密码，可以为空。</font>
-
-<p>(3) 添加SSH Key到Github<br>你的.ssh文件夹下，应该有一个id_rsa_new.pub文件了，打开该文件，复制里面的文本。然后登录Github，点击右上角头像右边的三角图标，点击Settings，然后在左边菜单栏点击SSH and GPG keys，点击New SSH key，Title 随便填一个，在Key栏填入你复制的内容，点击Add SSH key，就添加成功了。</p>
-<p>(4) 执行ssh-agent让ssh识别新的私钥<br>默认SSH只会读取id_rsa，所以为了让SSH识别新的私钥，需要将其添加到SSH agent。在终端输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~/.ssh/id_rsa_new</span><br></pre></td></tr></table></figure></p>
-<font color="red">注意：如果报错：Could not open a connection to your authentication agent.无法连接到ssh agent。可执行ssh-agent bash命令后再执行ssh-add命令。</font>
-
-<p>(5) 检验SSH Key是否配置成功<br>在终端输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
-<p>如果最后出现<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi username! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure></p>
-<p>就说明你的SSH Key配置成功了。</p>
+        <p>##（一）React项目初始化及工作方式<br>1、安装Node.js和npm，以支持开发工具的使用；<br>2、通过命令行安装create-react-app：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install —global create-react-app  //简写：npm install —g create-react-app</span><br></pre></td></tr></table></figure></p>
+<p>3、执行以下命令，在当前目录下创建一个名为first-react-app的目录，并自动添加一个react应用框架：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create-react-app first-react-app</span><br></pre></td></tr></table></figure></p>
+<p>4、执行以下命令，进入应用目录，启动服务器，浏览器自动打开<a href="http://localhost:3000/，显示界面如图1所示：" target="_blank" rel="noopener">http://localhost:3000/，显示界面如图1所示：</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd first-react-app</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure></p>
+<center><br><img src="../img/React项目初始化及工作方式_图1.png" alt="avatar" title="图1"><br>图1<br></center>
 
       
 
@@ -232,7 +221,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SSH</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
         		</li>
       		
 		</ul>
@@ -288,7 +277,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/06/Github配置SSH-Key/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/15/（一）React项目初始化及工作方式/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -302,18 +291,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/11/07/三阶魔方还原攻略/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          三阶魔方还原攻略
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/11/06/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2018/11/13/JPA实体关系映射总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JPA实体关系映射总结</div>
       <i class="icon-circle-right"></i>
     </a>
   
