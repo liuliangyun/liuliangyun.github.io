@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/11/15/img/React项目初始化及工作方式_图1.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/15/img/React项目初始化及工作方式_图2.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/15/img/React项目初始化及工作方式_图3.png">
-<meta property="og:updated_time" content="2018-11-15T07:13:05.046Z">
+<meta property="og:updated_time" content="2018-11-15T07:15:26.320Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="（一）React项目初始化及工作方式">
 <meta name="twitter:description" content="一、React项目初始化1、安装Node.js和npm，以支持开发工具的使用；2、通过命令行安装create-react-app：1npm install —global create-react-app  //简写：npm install —g create-react-app 3、执行以下命令，在当前目录下创建一个名为first-react-app的目录，并自动添加一个react应用框架：1c">
@@ -189,7 +189,7 @@
 
 <p>2、React的开发模式为通过组件来开发应用，通过重复渲染组件实现用户交互。<br>例：用React Component实现button的ClickCounter计数功能。<br>JSX文件（集成了HTML和JS语法，还可以集成CSS样式）为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123;Component&#125; from &apos;react&apos;;</span><br><span class="line">class ClickCounter extends Component&#123;</span><br><span class="line">    constructor(props)&#123;</span><br><span class="line">        super(props);</span><br><span class="line">        this.onClickButton = this.onClickButton.bind(this);</span><br><span class="line">        this.state = &#123;count : 0&#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    onClickButton()&#123;</span><br><span class="line">        this.setState(&#123;count: this.state.count + 1&#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render()&#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;button id=&quot;clickMe&quot; onClick=&#123;this.onClickButton&#125;&gt;ClickMe&lt;/button&gt;</span><br><span class="line">                &lt;div&gt;</span><br><span class="line">                    Click Count: &#123;this.state.count&#125;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default ClickCounter;</span><br></pre></td></tr></table></figure></p>
 <p><font color="red">优点：<br>React组件可以把JavaScript、HTML、CSS的功能集成到一个文件中，实现真正的组件封装。<br>借助Virtual DOM使得整个过程不牵涉太多的DOM操作，渲染效率很高，开发出来的代码可维护性和可阅读性也大大增强，如图3所示。</font></p>
-<p><center><br><img src="../img/React项目初始化及工作方式_图3.png" width="400" height="300"><br>图3<br></center></p>
+<p><center><br><img src="../img/React项目初始化及工作方式_图3.png" width="400" height="200"><br>图3<br></center></p>
 <p><font color="red">注意：Virtual DOM是对DOM树的抽象，每次自上而下渲染React组件时，会对比这一次产生的Virtual DOM和上一次的，发现差别，然后在真正的DOM树上修改差别部分即可。以上述例子为例，React通过对比Virtual DOM变化，发现仅仅只是span元素的值发生改变，实际DOM只需要更换span元素的内容，其它DOM元素都无需触及，即：</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(“clickCount”).innerHTML = “1”;</span><br></pre></td></tr></table></figure></p>
 <h3 id="四、React-js-VS-Vue-js"><a href="#四、React-js-VS-Vue-js" class="headerlink" title="四、React.js  VS  Vue.js"></a>四、React.js  VS  Vue.js</h3><ul>
 <li>React.js 较Vue.js更灵活，处理复杂业务时技术方案更多；</li>
@@ -438,11 +438,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jpa</a>
+                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
+                <a href="javascript:void(0)" class="js-tag color4">jpa</a>
               </li>
              
               <li class="article-tag-list-item">
