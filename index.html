@@ -232,7 +232,7 @@
       
         <p>最近在学习 CSS 布局，看到了这两个经典布局（其实是同一个只是实现方式不同），才发现自己原来对很多 CSS 属性理解的都不够，于是仔细看了这两个布局的实现方式自己动手做了一遍，希望能有更深的理解。</p>
 <p>圣杯布局和双飞翼布局都是实现三栏布局的方法，页面整体分为三部分，header、container、footer，其中 container 部分左右定宽，中间自适应，是很常见的布局，效果如图1。</p>
-<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图1.png" width="600" height="300"><br>图1<br></center>
+<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图1.png" width="600" height="200"><br>图1<br></center>
 
 <p>下面分别介绍两种布局的实现原理。</p>
 <h3 id="圣杯布局"><a href="#圣杯布局" class="headerlink" title="圣杯布局"></a>圣杯布局</h3><p>html 代码如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span> <span class="attr">dir</span>=<span class="string">"ltr"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Layout Demo<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./style.css"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"header"</span>&gt;</span>header<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span>main<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span>footer<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
@@ -245,24 +245,24 @@
 <ul>
 <li>将 main、left、right 部分都设置左浮动,此时由于中间部分脱离了文档流，footer 就会挤上去，因此需要给 container 加上 <code>overflow: hidden</code>，保证中间部分的空间留出来。</li>
 </ul>
-<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图3.png" width="600" height="300"><br>图3<br></center>
+<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图3.png" width="600" height="250"><br>图3<br></center>
 
 <ul>
 <li>此时 left 和 right 依旧在下一行，为了使 left 和 right 移上去，则需要缩小 main 部分的宽度，通过 container 的 padding 来设置。设置 container 的左右 padding 为 100px，给 left 加上 <code>margin-left: -100%</code>使其上移一行。</li>
 </ul>
-<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图4.png" width="600" height="300"><br>图4<br></center>
+<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图4.png" width="600" height="250"><br>图4<br></center>
 
 <ul>
 <li>使用相对定位使left 靠左。<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">position</span>: <span class="selector-tag">relative</span>;</span><br><span class="line"><span class="selector-tag">left</span>: <span class="selector-tag">-100px</span>;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图5.png" width="600" height="300"><br>图5<br></center>
+<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图5.png" width="600" height="250"><br>图5<br></center>
 
 <ul>
 <li>同理，将 right 部分上移。<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">margin-left</span>: <span class="selector-tag">-100px</span>;</span><br><span class="line"><span class="selector-tag">position</span>: <span class="selector-tag">relative</span>;</span><br><span class="line"><span class="selector-tag">right</span>: <span class="selector-tag">-100px</span>;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图1.png" width="600" height="300"><br>图6<br></center>
+<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图1.png" width="600" height="200"><br>图6<br></center>
 
 <h3 id="双飞翼布局"><a href="#双飞翼布局" class="headerlink" title="双飞翼布局"></a>双飞翼布局</h3><p>双飞翼布局和圣杯布局在实现思路上大致相同，区别是双飞翼布局在 main 部分外面多了一层 div，利用父层 div 的 margin 值取代了圣杯布局中 container 的 padding。</p>
 <ul>
@@ -274,12 +274,12 @@
 <li>给 main 部分加一个内层 div，三部分（main、left、right）都设置 <code>float: left</code>， main 部分 <code>width: 100%</code>， left 和 right 定宽。</li>
 </ul>
 <p>html 结构如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span> <span class="attr">dir</span>=<span class="string">"ltr"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Layout Demo<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./style.css"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"header"</span>&gt;</span>header<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner-main"</span>&gt;</span>main<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span>footer<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图3.png" width="600" height="300"><br>图8<br></center>
+<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图3.png" width="600" height="250"><br>图8<br></center>
 
 <ul>
 <li>为了使 left 和 right 上移需要缩小 main 的宽度，和圣杯布局不同的是，这里通过设置 inner-main 的 margin 来留出位置，同样使用负 margin 来使得 left 和 right 上移。（<font color="red">这里不需要使用相对定位</font>）</li>
 </ul>
-<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图1.png" width="600" height="300"><br>图9<br></center>
+<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图1.png" width="600" height="200"><br>图9<br></center>
 
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>通过上面两种实现方式可以看出，圣杯布局和双飞翼布局在思路上的区别是：</p>
 <ul>
@@ -1357,11 +1357,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
+                <a href="javascript:void(0)" class="js-tag color4">jpa</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jpa</a>
+                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1373,11 +1373,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
+                <a href="javascript:void(0)" class="js-tag color3">rubik's cube</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">rubik's cube</a>
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
             
             <div class="clearfix"></div>
