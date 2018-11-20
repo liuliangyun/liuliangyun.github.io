@@ -6,20 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Spring Data JPA介绍及基本使用 | Liangyun Liu&#39;s Blog</title>
+  <title>圣杯布局 VS 双飞翼布局 | Liangyun Liu&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、什么是JPA &amp;nbsp;&amp;nbsp;JPA (Java Persistence API) 是Sun官方提出的Java持久化规范。它为Java开发人员提供了一种对象/关联映射工具来管理Java应用中的关系数据。&amp;nbsp;&amp;nbsp;JPA的总体思想和现有的Hibernate，TopLink，JDO等ORM框架大体一致。总的来说，JPA包括以下3方面的技术：  ORM映射元数据&amp;nbsp;&amp;n">
-<meta name="keywords" content="jpa">
+  <meta name="description" content="最近在学习 CSS 布局，看到了这两个经典布局（其实是同一个只是实现方式不同），才发现自己原来对很多 CSS 属性理解的都不够，于是仔细看了这两个布局的实现方式自己动手做了一遍，希望能有更深的理解。 圣杯布局和双飞翼布局都是实现三栏布局的方法，页面整体分为三部分，header、container、footer，其中 container 部分左右定宽，中间自适应，是很常见的布局，效果如图1。 图1">
+<meta name="keywords" content="layout">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring Data JPA介绍及基本使用">
-<meta property="og:url" content="http://yoursite.com/2018/11/08/Spring-Data-JPA介绍及基本使用/index.html">
+<meta property="og:title" content="圣杯布局 VS 双飞翼布局">
+<meta property="og:url" content="http://yoursite.com/2018/11/20/圣杯布局-VS-双飞翼布局/index.html">
 <meta property="og:site_name" content="Liangyun Liu&#39;s Blog">
-<meta property="og:description" content="一、什么是JPA &amp;nbsp;&amp;nbsp;JPA (Java Persistence API) 是Sun官方提出的Java持久化规范。它为Java开发人员提供了一种对象/关联映射工具来管理Java应用中的关系数据。&amp;nbsp;&amp;nbsp;JPA的总体思想和现有的Hibernate，TopLink，JDO等ORM框架大体一致。总的来说，JPA包括以下3方面的技术：  ORM映射元数据&amp;nbsp;&amp;n">
+<meta property="og:description" content="最近在学习 CSS 布局，看到了这两个经典布局（其实是同一个只是实现方式不同），才发现自己原来对很多 CSS 属性理解的都不够，于是仔细看了这两个布局的实现方式自己动手做了一遍，希望能有更深的理解。 圣杯布局和双飞翼布局都是实现三栏布局的方法，页面整体分为三部分，header、container、footer，其中 container 部分左右定宽，中间自适应，是很常见的布局，效果如图1。 图1">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-08T05:54:22.502Z">
+<meta property="og:image" content="http://yoursite.com/2018/11/20/img/圣杯布局-VS-双飞翼布局_图1.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/20/img/圣杯布局-VS-双飞翼布局_图2.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/20/img/圣杯布局-VS-双飞翼布局_图3.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/20/img/圣杯布局-VS-双飞翼布局_图4.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/20/img/圣杯布局-VS-双飞翼布局_图5.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/20/img/圣杯布局-VS-双飞翼布局_图1.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/20/img/圣杯布局-VS-双飞翼布局_图2.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/20/img/圣杯布局-VS-双飞翼布局_图3.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/20/img/圣杯布局-VS-双飞翼布局_图1.png">
+<meta property="og:updated_time" content="2018-11-20T06:26:30.054Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring Data JPA介绍及基本使用">
-<meta name="twitter:description" content="一、什么是JPA &amp;nbsp;&amp;nbsp;JPA (Java Persistence API) 是Sun官方提出的Java持久化规范。它为Java开发人员提供了一种对象/关联映射工具来管理Java应用中的关系数据。&amp;nbsp;&amp;nbsp;JPA的总体思想和现有的Hibernate，TopLink，JDO等ORM框架大体一致。总的来说，JPA包括以下3方面的技术：  ORM映射元数据&amp;nbsp;&amp;n">
+<meta name="twitter:title" content="圣杯布局 VS 双飞翼布局">
+<meta name="twitter:description" content="最近在学习 CSS 布局，看到了这两个经典布局（其实是同一个只是实现方式不同），才发现自己原来对很多 CSS 属性理解的都不够，于是仔细看了这两个布局的实现方式自己动手做了一遍，希望能有更深的理解。 圣杯布局和双飞翼布局都是实现三栏布局的方法，页面整体分为三部分，header、container、footer，其中 container 部分左右定宽，中间自适应，是很常见的布局，效果如图1。 图1">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/20/img/圣杯布局-VS-双飞翼布局_图1.png">
   
     <link rel="alternative" href="/atom.xml" title="Liangyun Liu&#39;s Blog" type="application/atom+xml">
   
@@ -151,200 +161,84 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Spring-Data-JPA介绍及基本使用" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-圣杯布局-VS-双飞翼布局" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Spring Data JPA介绍及基本使用
+      圣杯布局 VS 双飞翼布局
     </h1>
   
 
         
-        <a href="/2018/11/08/Spring-Data-JPA介绍及基本使用/" class="archive-article-date">
-  	<time datetime="2018-11-08T02:19:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-08</time>
+        <a href="/2018/11/20/圣杯布局-VS-双飞翼布局/" class="archive-article-date">
+  	<time datetime="2018-11-20T03:10:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一、什么是JPA</p>
-<p>&nbsp;&nbsp;JPA (Java Persistence API) 是Sun官方提出的Java持久化<font color="red">规范</font>。它为Java开发人员提供了一种对象/关联映射工具来管理Java应用中的关系数据。<br>&nbsp;&nbsp;JPA的总体思想和现有的Hibernate，TopLink，JDO等ORM框架大体一致。总的来说，JPA包括以下3方面的技术：</p>
+        <p>最近在学习 CSS 布局，看到了这两个经典布局（其实是同一个只是实现方式不同），才发现自己原来对很多 CSS 属性理解的都不够，于是仔细看了这两个布局的实现方式自己动手做了一遍，希望能有更深的理解。</p>
+<p>圣杯布局和双飞翼布局都是实现三栏布局的方法，页面整体分为三部分，header、container、footer，其中 container 部分左右定宽，中间自适应，是很常见的布局，效果如图1。</p>
+<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图1.png" width="600" height="300"><br>图1<br></center>
+
+<p>下面分别介绍两种布局的实现原理。</p>
+<h3 id="圣杯布局"><a href="#圣杯布局" class="headerlink" title="圣杯布局"></a>圣杯布局</h3><p>html 代码如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span> <span class="attr">dir</span>=<span class="string">"ltr"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Layout Demo<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./style.css"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"header"</span>&gt;</span>header<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span>main<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span>footer<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><font color="red">注意： 先写 main 部分是因为要先渲染中间部分。</font></p>
 <ul>
-<li>ORM映射元数据<br>&nbsp;&nbsp;JPA支持XML和JDK5.0注释(也可译作注解)两种元数据的形式，元数据描述对象和表之间的映射关系，框架据此将实体对象持久化到数据库表中。</li>
-<li>Java持久化API<br>&nbsp;&nbsp;JPA可用来操作实体对象，执行CRUD操作，框架在后台替我们完成所有的事情，开发者可以从繁琐的JDBC和SQL代码中解脱出来。</li>
-<li>查询语言（JPQL）<br>&nbsp;&nbsp;JPA可通过面向对象而非面向数据库的查询语言查询数据，避免程序的SQL语句紧密耦合。</li>
+<li>给每一部分加上背景颜色，左右边栏固定宽度100px，中间栏宽度自适应，此时页面如图2所示：</li>
 </ul>
-<font color="red">注意：JPA不是一种新的ORM框架，它的出现只是用于规范现有的ORM技术，它不能取代Hibernate，TopLink等ORM框架。相反，在采用JPA开发时，我们仍将使用到这些ORM框架，只是此时开发出来的应用不再依赖于某个持久化提供商，使得应用可以在不修改代码的情况下在任何JPA环境下运行，真正做到低耦合，可扩展的程序设计。</font>
+<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图2.png" width="600" height="300"><br>图2<br></center>
 
+<ul>
+<li>将 main、left、right 部分都设置左浮动,此时由于中间部分脱离了文档流，footer 就会挤上去，因此需要给 container 加上 <code>overflow: hidden</code>，保证中间部分的空间留出来。</li>
+</ul>
+<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图3.png" width="600" height="300"><br>图3<br></center>
 
-<p>二、什么是Spring Data JPA<br>&nbsp;&nbsp;Spring Data JPA 表示Spring与JPA的整合。<br>&nbsp;&nbsp;我们都知道，在使用持久化工具的时候，一般都有一个对象来操作数据库，在原生的Hibernate中叫Session，在JPA中叫EntityManager，在MyBatis中叫SqlSession，通过这个对象来操作数据库。我们一般按照三层结构来看的话，Service层做业务逻辑处理，Dao层和数据库打交道，在Dao中，就存在着上面的对象。</p>
-<font color="red">注意：Dao这个层叫做Data Access Object，数据库访问对象，这是一个广泛的词语。在JPA当中，还有一个词语叫做Repository，我们一般就用Repository结尾来表示这个Dao，比如UserDao实际被称为UserRepository。同理，在Mybatis中我们一般也不叫Dao，Mybatis由于使用xml映射文件，因此一般使用Mapper结尾，叫UserMapper。</font>
+<ul>
+<li>此时 left 和 right 依旧在下一行，为了使 left 和 right 移上去，则需要缩小 main 部分的宽度，通过 container 的 padding 来设置。设置 container 的左右 padding 为 100px，给 left 加上 <code>margin-left: -100%</code>使其上移一行。</li>
+</ul>
+<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图4.png" width="600" height="300"><br>图4<br></center>
 
+<ul>
+<li>使用相对定位使left 靠左。<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">position</span>: <span class="selector-tag">relative</span>;</span><br><span class="line"><span class="selector-tag">left</span>: <span class="selector-tag">-100px</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图5.png" width="600" height="300"><br>图5<br></center>
 
-<p>三、Spring Data JPA的优势</p>
-<p>&nbsp;&nbsp;ORM框架本身只提供基本的CRUD功能，业务逻辑层面的处理ORM是没有提供的，如果使用原生的框架，业务逻辑代码我们一般会自定义，会自己去写SQL语句，然后执行。为了全方位的解决用户的需求，可以使用Spring Data JPA进行开发，我们几乎不需要写一条sql语句就能满足基本的业务需求，当然Spring Data JPA也提供自己写sql的方式，依据个人选择。</p>
-<p>注意：Spring Data JPA提供基础的CRUD工作，同时也提供业务逻辑的功能，所以我们的Repository接口要做两项工作，继承Spring Data JPA提供的基础CRUD功能的接口，同时还需要在UserRepository接口中定义自己的方法，那么导致的结局就是UserRepository这个接口中有很多的方法，那么如果我们的UserRepositoryImpl实现了UserRepository接口，导致的后果就是我们需要重写其中的所有方法，这显然是不行的。<font color="red">Spring Data JPA使我们不用去写implements部分，直接在同一包下定义UserRepository接口继承JpaRepository，并定义UserRepositoryImpl实现业务逻辑，如下所示：</font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public interface UserRepository extends JpaRepository&lt;User, Integer&gt;&#123;&#125;</span><br><span class="line">public class UserRepositoryImpl &#123;&#125;</span><br></pre></td></tr></table></figure>
-<p>四、Spring-boot结合Spring Data JPA操作MySQL数据库（<font color="red">完整项目实例</font>）</p>
-<p>(1) 在配置文件中引入Spring Data JPA和MySQL的依赖</p>
-<p>a. In maven project:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-<p>b. In gradle project:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">   compile(&apos;org.springframework.boot:spring-boot-starter-data-jpa’)</span><br><span class="line">   runtime(&apos;mysql:mysql-connector-java&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>(2) 在application.yml文件中配置数据库的地址及相应的jpa</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    url: jdbc:mysql://127.0.0.1:3306/jpa_demo?characterEncoding=utf-8 #jpa_demo为数据库名，characterEncoding支持中文编码</span><br><span class="line">    username: root</span><br><span class="line">    password: 123456</span><br><span class="line">  jpa:</span><br><span class="line">    show-sql: true #打印sql语句</span><br><span class="line">    database: mysql</span><br></pre></td></tr></table></figure>
-<p>(3) 数据库建表：user</p>
-<p>建表语句如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create table jpa_demo.user (</span><br><span class="line">  id bigint(11) primary key AUTO_INCREMENT not null,</span><br><span class="line">  name varchar(32),</span><br><span class="line">  password varchar(32),</span><br><span class="line">  birthday DATE</span><br><span class="line">) charset utf8;</span><br></pre></td></tr></table></figure>
-<p>(4) 建立数据库中表对应的实体类User</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">package com.tw.jpa_demo.entity;</span><br><span class="line"></span><br><span class="line">import javax.persistence.*;</span><br><span class="line"></span><br><span class="line">@Entity</span><br><span class="line">@Table(name = &quot;user&quot;)</span><br><span class="line">public class User &#123;</span><br><span class="line"></span><br><span class="line">    @Id</span><br><span class="line">    @GeneratedValue(strategy = GenerationType.IDENTITY)</span><br><span class="line">    private int id;</span><br><span class="line">    private String name;</span><br><span class="line">    private String password;</span><br><span class="line">    private String birthday;</span><br><span class="line"></span><br><span class="line">    public User(String name, String password, String birthday) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.password = password;</span><br><span class="line">        this.birthday = birthday;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //空的构造函数</span><br><span class="line">    public User() &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //Get,Set方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<font color="red"><br>分析：User 类包含四个字段：<br><em>  id作为唯一标识符，@GeneratedValue(strategy=GenerationType.IDENTITY)表明id是一个自增字段。
-</em>  name, password, birthday 为普通字段，@Column注解可有可无<br><em>  @Entity注解：标记在类上，当程序运行，User 类会自动映射到数据库中，生成以user 命名的数据表，User 类的字段自动映射为user表的字段。
-</em>  @Table(name = {数据表名})：可有可无，如果我们不喜欢默认用类名作为数据表名，可以使用注解自定义数据表名。<br></font>
+<ul>
+<li>同理，将 right 部分上移。<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">margin-left</span>: <span class="selector-tag">-100px</span>;</span><br><span class="line"><span class="selector-tag">position</span>: <span class="selector-tag">relative</span>;</span><br><span class="line"><span class="selector-tag">right</span>: <span class="selector-tag">-100px</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图1.png" width="600" height="300"><br>图6<br></center>
 
-<p>(5) 创建CSR（Controller，Service，Repository）</p>
-<p>UserController:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">package com.tw.jpa_demo.controller;</span><br><span class="line"></span><br><span class="line">import com.tw.jpa_demo.entity.User;</span><br><span class="line">import com.tw.jpa_demo.service.UserService;</span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.http.ResponseEntity;</span><br><span class="line">import org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.PathVariable;</span><br><span class="line">import org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line">@RestController  //处理http请求，返回json格式</span><br><span class="line">@RequestMapping(value = &quot;/users”)  //配置url，让该类下的所有接口url都映射在/users下</span><br><span class="line">public class UserController &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired  //自动注入实例</span><br><span class="line">    UserService userService;</span><br><span class="line"></span><br><span class="line">    @GetMapping(value = &quot;/&#123;name&#125;/&#123;password&#125;&quot;)</span><br><span class="line">    public ResponseEntity&lt;User&gt; get(@PathVariable String name,</span><br><span class="line">                                    @PathVariable String password) &#123;</span><br><span class="line">        User user = userService.login(name,password);</span><br><span class="line">        if(user==null)&#123;</span><br><span class="line">            return ResponseEntity.notFound().build();</span><br><span class="line">        &#125;</span><br><span class="line">        return ResponseEntity.ok(user);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>UserService:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">package com.tw.jpa_demo.service;</span><br><span class="line"></span><br><span class="line">import com.tw.jpa_demo.entity.User;</span><br><span class="line">import com.tw.jpa_demo.repository.UserRepository;</span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.stereotype.Service;</span><br><span class="line"></span><br><span class="line">@Service</span><br><span class="line">public class UserService &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    UserRepository userRepository;</span><br><span class="line">    </span><br><span class="line">    public User login(String name, String password) &#123;</span><br><span class="line">        return userRepository.findByNameAndPassword(name,password);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>UserRepository:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">package com.tw.jpa_demo.repository;</span><br><span class="line"></span><br><span class="line">import com.tw.jpa_demo.entity.User;</span><br><span class="line">import org.springframework.data.jpa.repository.JpaRepository;</span><br><span class="line">import org.springframework.stereotype.Repository;</span><br><span class="line"></span><br><span class="line">@Repository</span><br><span class="line">public interface UserRepository extends JpaRepository&lt;User, Integer&gt; &#123;</span><br><span class="line"></span><br><span class="line">    User findByNameAndPassword(String name, String password);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<font color="red">分析：userRepository 接口继承JpaRepository，此接口是 Spring Data JPA 内部定义好的泛型接口，第一个参数实体类，第二个参数是ID。已经帮我们实现了基本的增删改查的功能，现在只要持有 UserRepository 就能操作数据表。</font>
+<h3 id="双飞翼布局"><a href="#双飞翼布局" class="headerlink" title="双飞翼布局"></a>双飞翼布局</h3><p>双飞翼布局和圣杯布局在实现思路上大致相同，区别是双飞翼布局在 main 部分外面多了一层 div，利用父层 div 的 margin 值取代了圣杯布局中 container 的 padding。</p>
+<ul>
+<li>先回到基础布局的样子。</li>
+</ul>
+<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图2.png" width="600" height="300"><br>图7<br></center>
 
+<ul>
+<li>给 main 部分加一个内层 div，三部分（main、left、right）都设置 <code>float: left</code>， main 部分 <code>width: 100%</code>， left 和 right 定宽。</li>
+</ul>
+<p>html 结构如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span> <span class="attr">dir</span>=<span class="string">"ltr"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Layout Demo<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./style.css"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"header"</span>&gt;</span>header<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner-main"</span>&gt;</span>main<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span>footer<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图3.png" width="600" height="300"><br>图8<br></center>
 
-<p>五、Spring Data JPA 支持通过方法名来创建对应的数据库查询</p>
-<table>
-<thead>
-<tr>
-<th>Keyword</th>
-<th style="text-align:right">Sample</th>
-<th style="text-align:right">JPQL snippet</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>And</td>
-<td style="text-align:right">findByLastnameAndFirstname</td>
-<td style="text-align:right">… where x.lastname = ?1 and x.firstname = ?2</td>
-</tr>
-<tr>
-<td>Or</td>
-<td style="text-align:right">findByLastnameOrFirstname</td>
-<td style="text-align:right">… where x.lastname = ?1 or x.firstname = ?2</td>
-</tr>
-<tr>
-<td>Is,Equals</td>
-<td style="text-align:right">findByFirstname,findByFirstnameIs,findByFirstnameEquals</td>
-<td style="text-align:right">… where x.firstname = ?1</td>
-</tr>
-<tr>
-<td>Between</td>
-<td style="text-align:right">findByStartDateBetween</td>
-<td style="text-align:right">… where x.startDate between ?1 and ?2</td>
-</tr>
-<tr>
-<td>LessThan</td>
-<td style="text-align:right">findByAgeLessThan</td>
-<td style="text-align:right">… where x.age &lt; ?1</td>
-</tr>
-<tr>
-<td>LessThanEqual</td>
-<td style="text-align:right">findByAgeLessThanEqual</td>
-<td style="text-align:right">… where x.age &lt;= ?1</td>
-</tr>
-<tr>
-<td>GreaterThan</td>
-<td style="text-align:right">findByAgeGreaterThan</td>
-<td style="text-align:right">… where x.age &gt; ?1</td>
-</tr>
-<tr>
-<td>GreaterThanEqual</td>
-<td style="text-align:right">findByAgeGreaterThanEqual</td>
-<td style="text-align:right">… where x.age &gt;= ?1</td>
-</tr>
-<tr>
-<td>After</td>
-<td style="text-align:right">findByStartDateAfter</td>
-<td style="text-align:right">… where x.startDate &gt; ?1</td>
-</tr>
-<tr>
-<td>Before</td>
-<td style="text-align:right">findByStartDateBefore</td>
-<td style="text-align:right">… where x.startDate &lt; ?1</td>
-</tr>
-<tr>
-<td>IsNull</td>
-<td style="text-align:right">findByAgeIsNull</td>
-<td style="text-align:right">… where x.age is null</td>
-</tr>
-<tr>
-<td>IsNotNull,NotNull</td>
-<td style="text-align:right">findByAge(Is)NotNull</td>
-<td style="text-align:right">… where x.age not null</td>
-</tr>
-<tr>
-<td>Like</td>
-<td style="text-align:right">findByFirstnameLike</td>
-<td style="text-align:right">… where x.firstname like ?1</td>
-</tr>
-<tr>
-<td>NotLike</td>
-<td style="text-align:right">findByFirstnameNotLike</td>
-<td style="text-align:right">… where x.firstname not like ?1</td>
-</tr>
-<tr>
-<td>StartingWith</td>
-<td style="text-align:right">findByFirstnameStartingWith</td>
-<td style="text-align:right">… where x.firstname like ?1 (parameter bound with appended %)</td>
-</tr>
-<tr>
-<td>EndingWith</td>
-<td style="text-align:right">findByFirstnameEndingWith</td>
-<td style="text-align:right">… where x.firstname like ?1 (parameter bound with prepended %)</td>
-</tr>
-<tr>
-<td>Containing</td>
-<td style="text-align:right">findByFirstnameContaining</td>
-<td style="text-align:right">… where x.firstname like ?1 (parameter bound wrapped in %)</td>
-</tr>
-<tr>
-<td>OrderBy</td>
-<td style="text-align:right">findByAgeOrderByLastnameDesc</td>
-<td style="text-align:right">… where x.age = ?1 order by x.lastname desc</td>
-</tr>
-<tr>
-<td>Not</td>
-<td style="text-align:right">findByLastnameNot</td>
-<td style="text-align:right">… where x.lastname &lt;&gt; ?1</td>
-</tr>
-<tr>
-<td>In</td>
-<td style="text-align:right">findByAgeIn(Collection<age> ages)</age></td>
-<td style="text-align:right">… where x.age in ?1</td>
-</tr>
-<tr>
-<td>NotIn</td>
-<td style="text-align:right">findByAgeNotIn(Collection<age> ages)</age></td>
-<td style="text-align:right">… where x.age not in ?1</td>
-</tr>
-<tr>
-<td>True</td>
-<td style="text-align:right">findByActiveTrue()</td>
-<td style="text-align:right">… where x.active = true</td>
-</tr>
-<tr>
-<td>False</td>
-<td style="text-align:right">findByActiveFalse()</td>
-<td style="text-align:right">… where x.active = false</td>
-</tr>
-<tr>
-<td>IgnoreCase</td>
-<td style="text-align:right">findByFirstnameIgnoreCase</td>
-<td style="text-align:right">… where UPPER(x.firstame) = UPPER(?1)</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>为了使 left 和 right 上移需要缩小 main 的宽度，和圣杯布局不同的是，这里通过设置 inner-main 的 margin 来留出位置，同样使用负 margin 来使得 left 和 right 上移。（<font color="red">这里不需要使用相对定位</font>）</li>
+</ul>
+<center><br><img src="../img/圣杯布局-VS-双飞翼布局_图1.png" width="600" height="300"><br>图9<br></center>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>通过上面两种实现方式可以看出，圣杯布局和双飞翼布局在思路上的区别是：</p>
+<ul>
+<li><p>圣杯布局通过设置主元素的 padding 来为左右栏留出位置，而双飞翼布局是在中间栏增加子元素，通过内层子元素的 margin 来为左右栏留出位置。（<font color="red">注意：双飞翼布局中 width 和 float 属性都是设置在外层 div 上的，而背景颜色是设置在inner-main上的以避免背景颜色的重叠</font>）</p>
+</li>
+<li><p>圣杯布局中为了使得左右栏分布在最左和最右需要同时使用负 margin 和相对定位实现，而双飞翼布局中不需要使用相对定位。</p>
+</li>
+</ul>
 
       
 
@@ -389,7 +283,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">jpa</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">layout</a>
         		</li>
       		
 		</ul>
@@ -445,7 +339,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/08/Spring-Data-JPA介绍及基本使用/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/20/圣杯布局-VS-双飞翼布局/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -459,18 +353,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/11/08/Spring-Data-JPA支持的两种复杂动态查询方法/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/11/20/记录在印度浦那TWU的40天/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Spring Data JPA支持的两种复杂动态查询方法
+          记录在印度浦那TWU的40天
         
       </div>
     </a>
   
   
-    <a href="/2018/11/07/三阶魔方还原攻略/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">三阶魔方还原攻略</div>
+    <a href="/2018/11/15/（一）React项目初始化及工作方式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">（一）React项目初始化及工作方式</div>
       <i class="icon-circle-right"></i>
     </a>
   
