@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Liangyun Liu&#39;s Blog">
 <meta property="og:description" content="一、作用 配置SSH Key之后，每次pull、push不用都输入用户名和密码，提高效率。 二、步骤 (1) 检查本机上是否已经存在SSH Key打开终端，输入如下命令：12cd .sshls -la 检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：1cat id_rsa.pub 检查本地密钥文件（最后的账号名）是否对应gi">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-06T16:41:22.528Z">
+<meta property="og:updated_time" content="2018-11-21T05:53:37.426Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github配置SSH Key">
 <meta name="twitter:description" content="一、作用 配置SSH Key之后，每次pull、push不用都输入用户名和密码，提高效率。 二、步骤 (1) 检查本机上是否已经存在SSH Key打开终端，输入如下命令：12cd .sshls -la 检查终端输出的文件列表中是否已经存在id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，输入如下命令：1cat id_rsa.pub 检查本地密钥文件（最后的账号名）是否对应gi">
@@ -182,7 +182,7 @@
 <font color="red">注意：出现提示输入文件名的时候要输入与默认配置不一样的文件名，比如： id_rsa_new。然后会提示你输入两次密码，可以为空。</font>
 
 <p>(3) 添加SSH Key到Github<br>你的.ssh文件夹下，应该有一个id_rsa_new.pub文件了，打开该文件，复制里面的文本。然后登录Github，点击右上角头像右边的三角图标，点击Settings，然后在左边菜单栏点击SSH and GPG keys，点击New SSH key，Title 随便填一个，在Key栏填入你复制的内容，点击Add SSH key，就添加成功了。</p>
-<p>(4) 执行ssh-agent让ssh识别新的私钥<br>默认SSH只会读取id_rsa，所以为了让SSH识别新的私钥，需要将其添加到SSH agent。在终端输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~/.ssh/id_rsa_new</span><br></pre></td></tr></table></figure></p>
+<p>(4) 执行ssh-agent让ssh识别新的私钥（<font color="red">注意：每次重启电脑后需要重新操作一遍此命令，因为重启电脑后新的私钥处于没有被识别状态，是无效的</font>）<br>默认SSH只会读取id_rsa，所以为了让SSH识别新的私钥，需要将其添加到SSH agent。在终端输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~/.ssh/id_rsa_new</span><br></pre></td></tr></table></figure></p>
 <font color="red">注意：如果报错：Could not open a connection to your authentication agent.无法连接到ssh agent。可执行ssh-agent bash命令后再执行ssh-add命令。</font>
 
 <p>(5) 检验SSH Key是否配置成功<br>在终端输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
@@ -447,15 +447,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">rubik's cube</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">layout</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
