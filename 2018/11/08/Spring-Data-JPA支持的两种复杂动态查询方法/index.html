@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Spring Data JPA支持的两种复杂动态查询方法 | Liangyun Liu&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、使用JPQL a. 在UserRepository 同包下创建一个新的接口UserRepositoryCustom，定义复杂查询方法。 假设从minId至maxId中筛选出生日为birthday的用户集合，代码如下所示： UserRepositoryCustom：1234567891011package com.tw.jpa_demo.repository;import com.tw.jpa_">
+  <meta name="description" content="一、使用JPQL a. 在UserRepository 同包下创建一个新的接口UserRepositoryCustom，定义复杂查询方法。 假设从minId至maxId中筛选出生日为birthday的用户集合，代码如下所示：">
 <meta name="keywords" content="jpa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring Data JPA支持的两种复杂动态查询方法">
 <meta property="og:url" content="http://yoursite.com/2018/11/08/Spring-Data-JPA支持的两种复杂动态查询方法/index.html">
 <meta property="og:site_name" content="Liangyun Liu&#39;s Blog">
-<meta property="og:description" content="一、使用JPQL a. 在UserRepository 同包下创建一个新的接口UserRepositoryCustom，定义复杂查询方法。 假设从minId至maxId中筛选出生日为birthday的用户集合，代码如下所示： UserRepositoryCustom：1234567891011package com.tw.jpa_demo.repository;import com.tw.jpa_">
+<meta property="og:description" content="一、使用JPQL a. 在UserRepository 同包下创建一个新的接口UserRepositoryCustom，定义复杂查询方法。 假设从minId至maxId中筛选出生日为birthday的用户集合，代码如下所示：">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-08T05:29:34.778Z">
+<meta property="og:updated_time" content="2018-12-03T01:39:35.194Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Data JPA支持的两种复杂动态查询方法">
-<meta name="twitter:description" content="一、使用JPQL a. 在UserRepository 同包下创建一个新的接口UserRepositoryCustom，定义复杂查询方法。 假设从minId至maxId中筛选出生日为birthday的用户集合，代码如下所示： UserRepositoryCustom：1234567891011package com.tw.jpa_demo.repository;import com.tw.jpa_">
+<meta name="twitter:description" content="一、使用JPQL a. 在UserRepository 同包下创建一个新的接口UserRepositoryCustom，定义复杂查询方法。 假设从minId至maxId中筛选出生日为birthday的用户集合，代码如下所示：">
   
     <link rel="alternative" href="/atom.xml" title="Liangyun Liu&#39;s Blog" type="application/atom+xml">
   
@@ -170,6 +170,7 @@
         <p>一、使用JPQL</p>
 <p>a. 在UserRepository 同包下创建一个新的接口UserRepositoryCustom，定义复杂查询方法。</p>
 <p>假设从minId至maxId中筛选出生日为birthday的用户集合，代码如下所示：</p>
+<a id="more"></a>
 <p>UserRepositoryCustom：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">package com.tw.jpa_demo.repository;</span><br><span class="line"></span><br><span class="line">import com.tw.jpa_demo.entity.User;</span><br><span class="line">import org.springframework.stereotype.Repository;</span><br><span class="line"></span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">@Repository</span><br><span class="line">public interface UserRepositoryCustom &#123;</span><br><span class="line">    List&lt;User&gt; filter(String birthday, int minId, int maxId);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>b. 使UserRepository继承JpaRepository的同时，也继承接口UserRepositoryCustom。</p>
 <p>UserRepository：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">package com.tw.jpa_demo.repository;</span><br><span class="line"></span><br><span class="line">import com.tw.jpa_demo.entity.User;</span><br><span class="line">import org.springframework.data.jpa.repository.JpaRepository;</span><br><span class="line">import org.springframework.stereotype.Repository;</span><br><span class="line"></span><br><span class="line">@Repository</span><br><span class="line">public interface UserRepository extends JpaRepository&lt;User, Integer&gt;, UserRepositoryCustom &#123;</span><br><span class="line"></span><br><span class="line">    User findByNameAndPassword(String name, String password);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -443,11 +444,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">layout</a>
+                <a href="javascript:void(0)" class="js-tag color3">rubik's cube</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">rubik's cube</a>
+                <a href="javascript:void(0)" class="js-tag color2">layout</a>
               </li>
              
               <li class="article-tag-list-item">
